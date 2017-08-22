@@ -167,7 +167,6 @@ for step in range( len( x ) ):
         extra_message = " carry 1 " if carried_value == 1 else ""
         print "Step (B) ", step + 1, " (", Xi, " + ", Yi, extra_message, " = ", tsum, " )"
 
-    #do we need to carry?
     carried_value = 1 if tsum > 9 else 0
 
     if tsum > 9 and not last_step:
