@@ -81,7 +81,7 @@ y.reverse()
 carried_value = 0
 sum = []
 
-#and finally, calculate their sum
+#calculate their sum
 for step in range( len( x ) ):
     Xi = x[ step ]
     Yi = y[ step ]
