@@ -16,10 +16,7 @@ def to_num_array( string ):
     result = []
  
     for character in string:
-        
-        #only add it if we succeeded in conversion
-        if int( character ):
-            result.append( int( character ) )
+        result.append( int( character ) )
 
     return result
 
