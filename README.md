@@ -1,7 +1,7 @@
 # experimental-calculators
 Large-number calculators in Python
 
-##How to run:
+# How to run:
 python <name>.py
 
 example:
