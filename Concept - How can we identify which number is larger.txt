@@ -51,4 +51,4 @@ Algorithm Accuracy: (5/5) 100%
 ---------------------------------
 TODO:
 
-> fix the same first digit and length issue
+> fix the identical "first digit and length" issue
