@@ -1,0 +1,52 @@
+Experiment ( How can we identify which number is larger? )
+
+Samples:
+1: ( 1,500, 200 )
+2: ( 953.153, 953.335 )
+3: ( 0.351, 3.115 )
+4: ( 1350, 9531 )
+5: ( 919359139591395193999.139513, 135913010010103051.131351 )
+
+Our expected results:
+1: 1,500
+2: 953.335
+3: 3.115
+4: 9531
+5: 919359139591395193999.139513
+
+-----------------------------------
+Methodology:
+L = length of partition ( of our current number )
+B = base digit
+D = decimal digit
+d(x) = turn to decimal
+
+B0 = first digit of our base partition
+D0 = first digit of our decimal partition
+LB = length of our base partition
+LD = length of our decimal partition
+
+S = estimated size
+
+S(B,D) = (B0 * LB) + d( [L0 * LD ] )
+
+-------------------------------
+Our observed results:
+1: ( 4.0, 0.0 ) [ X is larger {1,500 > 200 } ]
+2: ( 27.3, 27.9 ) [ Y is larger { 953.335 > 953.153 } ]
+3:  ( 0.9, 3.3 ) [ Y is larger { 3.115 > 0.351 } ]
+4: ( 4.0, 36.0 ) [ Y is larger { 9531 > 1350 } ]
+5: ( 189.6, 0.6 ) [ X is larger { 919359139591395193999.139513 > 135913010010103051.131351 )
+
+-------------------------------
+Verification
+
+1: Expected: 1,500, Observed: 1,500
+2: Expected: 953.335, Observed: 953.335
+3: Expected: 3.115, Observed: 3.115
+4: Expected: 9531, Observed: 9531
+5: Expected: 919359139591395193999.139513, Observed: 919359139591395193999.139513
+
+Algorithm Accuracy: (5/5) 100%
+---------------------------------
+
