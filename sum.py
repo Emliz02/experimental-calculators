@@ -66,7 +66,7 @@ y = str( raw_input( "Enter your second number: " ) )
 
 #D* = decimal partition of a variable
 Dx, Dy = "", ""
-isDecimal = False
+is_decimal = False
 
 #split them into two parts (if they have decimals)
 if '.' in x or '.' in y:
@@ -84,13 +84,13 @@ if '.' in x or '.' in y:
     Dx = x_parts[ len( x_parts ) - 1 ]
     Dy = y_parts[ len( y_parts ) - 1 ]
     
-    isDecimal = True
+    is_decimal = True
 
 #turn them into number arrays
 x = to_num_array( x )
 y = to_num_array( y )
 
-if isDecimal:
+if is_decimal:
     Dx = to_num_array( Dx )
     Dy = to_num_array( Dy )
 
@@ -104,7 +104,7 @@ if not len(x) == len(y):
     else:
         x = equalise_arrays( a, b )
         
-if isDecimal:
+if is_decimal:
     if not len(Dx) == len(Dy):
         a = who_is_longer( Dx, Dy )
         b = who_is_shorter( Dx, Dy )
@@ -118,19 +118,19 @@ if isDecimal:
 x.reverse()
 y.reverse()
 
-if isDecimal:
+if is_decimal:
     Dx.reverse()
     Dy.reverse()
 
 carried_value = 0
 sum = []
-decimalSum = []
+decimal_sum = []
 
 #calculate their sum
 
 #decimal sum
 
-if isDecimal:
+if is_decimal:
     for step in range( len( Dx ) ):
         Xi = Dx[ step ]
         Yi = Dy[ step ]
@@ -150,7 +150,7 @@ if isDecimal:
             last_character = temporary_tsum[ length - 1 ]
             tsum = last_character  
             
-        decimalSum.append( tsum )
+        decimal_sum.append( tsum )
 
 #add newline    
 print
@@ -182,10 +182,10 @@ for step in range( len( x ) ):
 sum.reverse()
 sum = to_string( sum )
 
-if isDecimal:
-    decimalSum.reverse()
-    decimalSum = to_string( decimalSum )
-    sum = sum + '.' + decimalSum
+if is_decimal:
+    decimal_sum.reverse()
+    decimal_sum = to_string( decimal_sum )
+    sum = sum + '.' + decimal_sum
 
 #show result
 print sum
